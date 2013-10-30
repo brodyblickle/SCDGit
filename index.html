@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html manifest="cache.appcache">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<title>Smart Cycle Designs</title>
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
+		<link id="prettify-link" href="css/prettify.css" rel="stylesheet" disabled />
+		<link href="css/moon.css" class="theme" rel="stylesheet" />
+		<link href="css/sand.css" class="theme" rel="stylesheet" />
+		<link href="css/sea_wave.css" class="theme" rel="stylesheet" />
+		<link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+		<link href="css/common.css" rel="stylesheet" media="screen" />
+		<script>
+			function changeVisibility(elt) {
+				if (document.getElementById(elt).style.visibility == 'hidden') {
+					document.getElementById(elt).style.visibility = 'visible';
+					document.getElementById(elt).style.width = '80px';
+				} else {
+					document.getElementById(elt).style.visibility = 'hidden';
+				}
+
+			}
+		</script>
+
+		<style>
+			
+
+			.price-info {
+				
+				position: absolute;
+				background-color: red;
+				width: 40px;
+				height: 40px;
+				-moz-border-radius: 20px 20px 20px 20px;
+				-khtml-border-radius: 20px 20px 20px 20px;
+				border-radius: 20px 20px 20px 20px;
+				-webkit-border-top-right-radius: 20px 20px 20px 20px;
+				-webkit-border-bottom-left-radius: 20px 20px 20px 20px;
+				
+			}
+			span.price-info {opacity: 0.7;}
+			span.price-info:hover{opacity:0.9;}
+			
+		</style>
+	</head>
+	<body>
+		<nav id="helpers">
+			<button title="Previous slide" id="nav-prev" class="nav-prev">
+				⇽
+			</button>
+			<button title="Jump to a random slide" id="slide-no">
+				5
+			</button>
+			<button title="Next slide" id="nav-next" class="nav-next">
+				⇾
+			</button>
+			<menu>
+				<!--<button type="checkbox" data-command="toc" title="Table of Contents" class="toc">
+					TOC
+				</button> -->
+				<!-- <button type="checkbox" data-command="resources" title="View Related Resources">☆</button> -->
+				<button type="checkbox" data-command="notes" title="View Slide Notes">
+					✏
+				</button>
+				<button type="checkbox" data-command="source" title="View slide source">
+					↻
+				</button>
+				<button type="checkbox" data-command="help" title="View Help">
+					?
+				</button>
+			</menu>
+		</nav>
+		<div class="presentation">
+			<div id="presentation-counter">
+				Loading...
+			</div>
+			<div class="slides">
+				<div class="slide" id="landing-slide">
+					<style>
+					
+						#part1.price-info {left: 300px;
+				top: 210px;}
+						#part2.price-info {
+							left: 720px;
+							top: 335px;
+						}
+
+						#part3.price-info {
+							left: 430px;
+							top: 450px;
+						}
+
+						#part-info1.price-info {
+							left: 300px;
+				top: 210px;
+							position: absolute;
+							line-height: 15px;
+							display: inline;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+							opacity: 1;
+						}
+						#part-info2.price-info, #part-info3.price-info {
+							position: static;
+							line-height: 15px;
+							display: block;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+							opacity: 1;
+						}
+						
+					</style>
+					<section class="middle">
+						<p>
+							<span class="price-info" id="part1" onclick="changeVisibility('part-info1');">
+								<p class="price-info" id="part-info1" onclick="changeVisibility(this.id);" style="visibility: hidden;">
+									Part 12345
+									<br/>
+									$499.44
+									<br/>
+									$534.34
+									<br/>
+									$500.34
+								</p> </span>
+
+							<span class="price-info" id="part2" onclick="changeVisibility('part-info2');">
+								<p class="price-info" id="part-info2" onclick="changeVisibility(this);" style="visibility: hidden;">
+									Part 222
+									<br/>
+									$4.44
+									<br/>
+									$5.34
+									<br/>
+									$4.99
+								</p> </span>
+
+							<span class="price-info" id="part3" onclick="changeVisibility('part-info3');">
+								<p class="price-info" id="part-info3" onclick="changeVisibility(this);" style="visibility: hidden;">
+									Part 33314
+									<br/>
+									$4121.44
+									<br/>
+									$5025.34
+									<br/>
+									$5100.00
+								</p> </span>
+
+							<img src="img/doorgreen.jpg" alt="Green Door">
+						</p>
+
+						<p>
+							Press <span id="left-init-key" class="key">&rarr;</span> key to advance.
+						</p>
+
+					</section>
+					<aside class="note">
+						<section>
+							Welcome! (This field is for presenter notes and commentary.)
+						</section>
+					</aside>
+				</div>
+
+				<div class="slide" id="controls-slide">
+
+					<style>
+						#part4.price-info{left: 150px; top: 240px;}
+						#part5.price-info {
+							left: 520px;
+							top: 200px;
+						}
+
+						#part6.price-info {
+							left: 590px;
+							top: 330px;
+						}
+
+						#part-info4.price-info {
+							left: 150px; top: 240px;
+							position: absolute;
+							line-height: 15px;
+							display: inline;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+						}
+						#part-info5.price-info, #part-info6.price-info {
+							position: static;
+							line-height: 15px;
+							display: block;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+						}
+						
+					</style>
+					<p>
+						<span class="price-info" id="part4" onclick="changeVisibility('part-info4');">
+							<p class="price-info" id="part-info4" onclick="changeVisibility(this.id);" style="visibility: hidden;">
+								Part 4
+								<br/>
+								$499.44
+								<br/>
+								$534.34
+								<br/>
+								$500.34
+							</p> </span>
+
+						<span class="price-info" id="part5" onclick="changeVisibility('part-info5');">
+							<p class="price-info" id="part-info5" onclick="changeVisibility(this);" style="visibility: hidden;">
+								Part 5
+								<br/>
+								$4.44
+								<br/>
+								$5.34
+								<br/>
+								$4.99
+							</p> </span>
+
+						<span class="price-info" id="part6" onclick="changeVisibility('part-info6');">
+							<p class="price-info" id="part-info6" onclick="changeVisibility(this);" style="visibility: hidden;">
+								Part 6
+								<br/>
+								$4121.44
+								<br/>
+								$5025.34
+								<br/>
+								$5100.00
+							</p> </span>
+						<img src="img/dooryellowL.jpg" alt="Yellow Door">
+				</div>
+
+				<div class="slide" id="title-slide">
+					<style>
+						#part7.price-info{left: 310px; top: 310px;}
+						#part8.price-info {
+							left: 540px;
+							top: 170px;
+						}
+
+						#part9.price-info {
+							left: 590px;
+							top: 330px;
+						}
+
+						#part-info7.price-info {
+							left: 310px; top: 310px;
+							position: absolute;
+							line-height: 15px;
+							display: inline;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+						}
+						#part-info8.price-info, #part-info9.price-info {
+							position: static;
+							line-height: 15px;
+							display: block;
+							height: auto;
+							background-color: lightgrey;
+							margin-top: -5px;
+							margin-left: -15px;
+						}
+						
+					</style>
+					<section class="middle">
+					<p>
+						<span class="price-info" id="part7" onclick="changeVisibility('part-info7');">
+							<p class="price-info" id="part-info7" onclick="changeVisibility(this.id);" style="visibility: hidden;">
+								Part 7
+								<br/>
+								$499.44
+								<br/>
+								$534.34
+								<br/>
+								$500.34
+							</p> </span>
+
+						<span class="price-info" id="part8" onclick="changeVisibility('part-info8');">
+							<p class="price-info" id="part-info8" onclick="changeVisibility(this);" style="visibility: hidden;">
+								Part 8
+								<br/>
+								$4.44
+								<br/>
+								$5.34
+								<br/>
+								$4.99
+							</p> </span>
+
+						<span class="price-info" id="part9" onclick="changeVisibility('part-info9');">
+							<p class="price-info" id="part-info9" onclick="changeVisibility(this);" style="visibility: hidden;">
+								Part 9
+								<br/>
+								$4121.44
+								<br/>
+								$5025.34
+								<br/>
+								$5100.00
+							</p> </span>
+					
+						<img src="img/dooryellowRear.jpg" alt="Yellow Door Rear">
+					</section>
+				</div>
+
+				
+
+				
+
+				
+					
+					<section>
+						<ul id="toc-list"></ul>
+					</section>
+				
+
+				
+
+				
+
+				
+
+
+				
+
+				
+
+				
+
+				
+
+				
+
+
+
+			</div>
+			<!-- slides -->
+			<div id="speaker-note" class="invisible" style="display: none;"></div>
+			<!-- speaker note -->
+			<aside id="help" class="sidebar invisible" style="display: hidden;">
+				<table>
+					<caption>
+						Help
+					</caption>
+					<tbody>
+						<tr>
+							<th>Move Around</th>
+							<td>&larr;&nbsp;&rarr;</td>
+						</tr>
+						<tr>
+							<th>Source File</th>
+							<td>s</td>
+						</tr>
+						<tr>
+							<th>Change Theme</th>
+							<td>t</td>
+						</tr>
+						<tr>
+							<th>Syntax Highlight</th>
+							<td>h</td>
+						</tr>
+						<tr>
+							<th>Speaker Notes</th>
+							<td>n</td>
+						</tr>
+						<tr>
+							<th>Toggle 3D</th>
+							<td>3</td>
+						</tr>
+						<tr>
+							<th>Help</th>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+			</aside>
+		</div>
+		<!-- presentation -->
+
+		<!--[if lt IE 9]>
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+		</script>
+		<script>CFInstall.check({ mode: "overlay" });</script>
+		<![endif]-->
+
+		<script src="prettify.js" onload="prettyPrint();" defer></script>
+		<script src="js/utils.js"></script>
+		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script>
+			// Check if new appcache is available, load it, and reload page.
+			if (window.applicationCache) {
+				window.applicationCache.addEventListener('updateready', function(e) {
+					if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+						window.applicationCache.swapCache();
+						if (confirm('A new version of this site is available. Load it?')) {
+							window.location.reload();
+						}
+					}
+				}, false);
+			}
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-15028909-5']);
+			_gaq.push(['_trackPageview']);
+			_gaq.push(['_trackPageLoadTime']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>
